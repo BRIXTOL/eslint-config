@@ -1,6 +1,6 @@
 {
   "name": "@brixtol/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ESLint configuration style guide for TypeScript projects contained within the Brixtol Textiles mono/multi repo workspace.",
   "author": {
     "name": "Νίκος Σαβίδης ",
