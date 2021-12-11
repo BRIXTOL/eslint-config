@@ -1,6 +1,6 @@
 {
   "name": "@brixtol/eslint-config",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "ESLint configuration style guide for TypeScript projects contained within the Brixtol Textiles mono/multi repo workspace.",
   "author": {
     "name": "Νίκος Σαβίδης ",
@@ -27,13 +27,16 @@
     "pnpm": ">=5"
   },
   "scripts": {
+    "postpublish": "pnpm update @brixtol/eslint-config -r",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "eslint": "^7.32.0"
+    "eslint": "^7.32.0",
+    "typescript": "^4.5.3"
   },
   "peerDependencies": {
-    "eslint": "^7.10.0"
+    "eslint": "^7.10.0",
+    "typescript": "^4.5.3"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.29.0",

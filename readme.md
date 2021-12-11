@@ -10,6 +10,8 @@ This package includes the shareable ESLint configuration consumed by [Brixtol Te
 pnpm i @brixtol/eslint-config --save-dev
 ```
 
+> Requires `typescript` and `eslint` as peers.
+
 ### Usage
 
 Extend the configuration within `package.json`
