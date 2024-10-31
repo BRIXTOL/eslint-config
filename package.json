@@ -10,6 +10,7 @@
   "license": "MIT",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -32,6 +33,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@eslint/eslintrc": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^8.12.2",
     "@typescript-eslint/parser": "^8.12.2",
     "eslint-config-standard": "^17.1.0",
@@ -41,7 +43,6 @@
     "eslint-plugin-promise": "^7.1.0"
   },
   "optionalDependencies": {
-    "eslint": "^9.13.0",
-    "typescript": "^5.6.3"
+    "eslint": "^9.13.0"
   }
 }

@@ -2,38 +2,43 @@
 
 This package includes the shareable ESLint configuration consumed by [Brixtol Textiles](https://www.brixtoltextiles.com) for [TypeScript](https://typescriptlang.org) projects.
 
+### Files
+
+The shared configuration applies to the following files:
+
+- `.js`
+- `.ts`
+- `.cjs`
+- `.mjs`
+
 ### Install
 
 [pnpm](https://pnpm.js.org/en/cli/install)
 
-```cli
-pnpm i @brixtol/eslint-config --save-dev
+```bash
+pnpm add @brixtol/eslint-config --save-dev
 ```
 
-> Requires `typescript` and `eslint` as peers.
+> Requires `eslint` as peer dependency.
 
 ### Usage
 
-Extend the configuration within `package.json`
+This shared configuration uses the eslint **flatConfig** format as per v9 of eslint and requires a `eslint.config.js` file be included at the root of projects.
 
-```json
-{
-  "eslintConfig": {
-    "ignorePatterns": "*.html",
-    "extends": ["@brixtol/eslint-config"]
+```js
+import shared from '@brixtol/eslint-config';
+
+export default [
+  ...shared,
+  {
+    ignores: [],
+    rules: {}
   }
-}
+];
 ```
-
-### Monorepo/Workspace
-
-This module is installed at project root in the Brixtol mono/multi repository and thus is available for consumption by all containing packages. Closed sourced packages consume the module from root whereas any open sourced packages existing in the monorepo workspace will provide the config as a development dependency. This approach allows individuals outside of our organization keeping to our code style aesthetics when contributing to projects made available to the public.
-
-> Please note that the Brixtol Textiles workspace is mostly closed source and only selected packages have been made available on public npm registry.
 
 ### Related
 
-- [@brixtol/eslint-config-javascript](https://github.com/brixtol/eslint-config-javascript)
 - [@brixtol/prettier-config](https://github.com/brixtol/prettier-config)
 
 ### License
