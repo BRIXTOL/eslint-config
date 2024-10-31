@@ -1,4 +1,5 @@
-module.exports = {
+import { ESLint } from 'eslint'
+export default {
   env: {
     browser: false,
     es6: true,
